@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SentraLink</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🔐SentraLink</h1>
+    <p>Advanced Cyber URL Intelligence System</p>
+
+    <form method="POST">
+        <input type="text" name="url" placeholder="Enter URL here..." required>
+        <button type="submit">Check</button>
+    </form>
+							
+    {% if result %}
+        <div class="result">
+            <h2>Result: {{ result }}</h2>
+            {% if reasons %}
+                <h3>Reasons:</h3>
+                <ul>
+                    {% for reason in reasons %}
+                        <li>{{ reason }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
