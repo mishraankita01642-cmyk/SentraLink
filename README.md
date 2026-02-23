@@ -1,7 +1,7 @@
 # SentraLink  🔗
 
 A simple **Python + Flask** web app that checks whether a URL looks *safe* or *suspicious* using basic, rule‑based analysis.  
-The goal is to teach safe browsing habits and introduce beginners to URL analysis concepts like length, symbols, and phishing‑related keywords.[web:14][web:32]
+The goal is to teach safe browsing habits and introduce beginners to URL analysis concepts like length, symbols, and phishing‑related keywords.
 
 ## ✨ Features
 
@@ -49,7 +49,7 @@ Open the shown URL in your browser :
 🔍 How the URL Analysis Works
 Input: User submits a URL through the web form.
 
-Validation: App checks if the string is a valid URL using validators.url. Invalid URLs are immediately marked suspicious with an explanation.[web:16]
+Validation: App checks if the string is a valid URL using validators.url. Invalid URLs are immediately marked suspicious with an explanation.
 
 Feature Extraction:
 
@@ -59,17 +59,17 @@ Domain (host) and path[web:34]
 
 Rule‑based Checks:
 
-Length thresholds (e.g. >54 chars, >80 chars).[web:34]
+Length thresholds (e.g. >54 chars, >80 chars).
 
-Count of special characters (@, ?, %, =, &, $).[web:35]
+Count of special characters (@, ?, %, =, &, $).
 
-Whether the domain looks like an IP address.[web:30]
+Whether the domain looks like an IP address.
 
-Occurrence of suspicious keywords in domain or path.[web:4][web:32]
+Occurrence of suspicious keywords in domain or path.
 
-Hyphens and look‑alike character patterns in domain.[web:33][web:35]
+Hyphens and look‑alike character patterns in domain.
 
-Scoring: Each suspicious sign adds to a risk score, inspired by common phishing‑URL feature engineering.[web:32][web:70]
+Scoring: Each suspicious sign adds to a risk score, inspired by common phishing‑URL feature engineering.
 
 Decision:
 
@@ -77,7 +77,7 @@ Score ≥ threshold → Suspicious
 
 Score < threshold → Safe
 
-Output: Flask renders a result page showing the label and a list of reasons so the user understands the decision.[web:32]
+Output: Flask renders a result page showing the label and a list of reasons so the user understands the decision.
 
 
 
