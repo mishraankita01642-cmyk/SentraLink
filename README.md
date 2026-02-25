@@ -17,67 +17,33 @@ The goal is to teach safe browsing habits and introduce beginners to URL analysi
 - Shows human‑readable reasons so users can learn what made the URL suspicious.
 
 
-## 🚀 Getting Started (Local Setup)
-
-### 1. Clone the repository
-
-
-git clone https://github.com/<your-username>/url-safety-checker.git
-cd url-safety-checker
-
-### 2. Create and activate a virtual environment (Windows)
-python -m venv venv
-venv\Scripts\activate
-Virtual environments help keep project dependencies isolated
-3. Install dependencies
-pip install -r requirements.txt
-If you don’t have a requirements.txt yet, you can create one like:
+## 🚀 Getting Started 
+### 1. Open the shown URL in your browser :  https://sentralink.onrender.com/
 
 
-flask
-validators
-and then run the install command.
-4. Run the development server
-Option 1 – simple:
-python app.py
-Option 2 – using flask run:
-set FLASK_APP=app.py
-set FLASK_ENV=development
-flask run
-
-Open the shown URL in your browser :
 🔍 How the URL Analysis Works
-Input: User submits a URL through the web form.
+1. Input: User submits a URL through the web form.
 
-Validation: App checks if the string is a valid URL using validators.url. Invalid URLs are immediately marked suspicious with an explanation.
+2. Validation: App checks if the string is a valid URL using validators.url. Invalid URLs are immediately marked suspicious with an explanation.
 
-Feature Extraction:
+3. Feature Extraction:
+  Full URL string
+  Domain (host) and path
 
-Full URL string
+4. Rule‑based Checks:
+  Length thresholds (e.g. >54 chars, >80 chars).
+  Count of special characters (@, ?, %, =, &, $).
+  Whether the domain looks like an IP address.
+  Occurrence of suspicious keywords in domain or path.
+  Hyphens and look‑alike character patterns in domain.
 
-Domain (host) and path[web:34]
+5. Scoring: Each suspicious sign adds to a risk score, inspired by common phishing‑URL feature engineering.
 
-Rule‑based Checks:
+6. Decision:
+  Score ≥ threshold → Suspicious
+  Score < threshold → Safe
 
-Length thresholds (e.g. >54 chars, >80 chars).
-
-Count of special characters (@, ?, %, =, &, $).
-
-Whether the domain looks like an IP address.
-
-Occurrence of suspicious keywords in domain or path.
-
-Hyphens and look‑alike character patterns in domain.
-
-Scoring: Each suspicious sign adds to a risk score, inspired by common phishing‑URL feature engineering.
-
-Decision:
-
-Score ≥ threshold → Suspicious
-
-Score < threshold → Safe
-
-Output: Flask renders a result page showing the label and a list of reasons so the user understands the decision.
+7. Output: Flask renders a result page showing the label and a list of reasons so the user understands the decision.
 
 
 
