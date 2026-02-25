@@ -27,21 +27,21 @@ The goal is to teach safe browsing habits and introduce beginners to URL analysi
 2. Validation: App checks if the string is a valid URL using validators.url. Invalid URLs are immediately marked suspicious with an explanation.
 
 3. Feature Extraction:
-  Full URL string
-  Domain (host) and path
+  -Full URL string
+  -Domain (host) and path
 
 4. Rule‑based Checks:
-  Length thresholds (e.g. >54 chars, >80 chars).
-  Count of special characters (@, ?, %, =, &, $).
-  Whether the domain looks like an IP address.
-  Occurrence of suspicious keywords in domain or path.
-  Hyphens and look‑alike character patterns in domain.
+  -Length thresholds (e.g. >54 chars, >80 chars).
+  -Count of special characters (@, ?, %, =, &, $).
+  -Whether the domain looks like an IP address.
+  -Occurrence of suspicious keywords in domain or path.
+  -Hyphens and look‑alike character patterns in domain.
 
 5. Scoring: Each suspicious sign adds to a risk score, inspired by common phishing‑URL feature engineering.
 
 6. Decision:
-  Score ≥ threshold → Suspicious
-  Score < threshold → Safe
+  -Score ≥ threshold → Suspicious
+  -Score < threshold → Safe
 
 7. Output: Flask renders a result page showing the label and a list of reasons so the user understands the decision.
 
