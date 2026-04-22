@@ -3,14 +3,14 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 
-    /* 🌌 Background */
+    /* Background */
     background: url("background.jpg") no-repeat center center fixed;
     background-size: cover;
 
     color: white;
 }
 
-/* 🔥 LOGO (Sticker Floating) */
+/* LOGO (Sticker Floating) */
 .logo {
     width: 180px;
     position: absolute;
