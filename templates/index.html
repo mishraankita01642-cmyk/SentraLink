@@ -2,19 +2,22 @@
 <html>
 <head>
     <title>SentraLink</title>
+
+    <!-- Cyber Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-<!-- 🔥 LOGO (Sticker Style) -->
-<img src="{{ url_for('static', filename='logo.png') }}" class="logo">
-
 <div class="container">
 
+    <!-- CYBER HEADING -->
+    <h1 class="main-title">SentraLink</h1>
     <p class="subtitle">Advanced Cyber URL Intelligence System</p>
 
-    <!-- 🔍 SEARCH BAR -->
+    <!-- 🔍 SEARCH -->
     <form method="POST">
         <div class="search-box">
             <input type="text" name="url" placeholder="Enter URL here..." required>
