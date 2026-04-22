@@ -3,14 +3,10 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 
-    /* Dark overlay + background image */
-    background: 
-        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
-        url("background.jpg") no-repeat center center fixed;
-
-    background-size: 100% auto;
-
-    color: white;
+    /* Full background (NO overlay, NO crop) */
+    background: url("background.jpg") no-repeat center center;
+    background-size: contain;
+    background-color: black;
 }
 
 /* Container */
@@ -31,7 +27,6 @@ body {
     color: #00ffcc;
     letter-spacing: 2px;
 
-    /* Neon glow */
     text-shadow:
         0 0 5px #00ffcc,
         0 0 10px #00ffcc,
@@ -39,7 +34,6 @@ body {
         0 0 40px #00ffcc;
 
     margin-bottom: 10px;
-
     animation: flicker 2s infinite;
 }
 
