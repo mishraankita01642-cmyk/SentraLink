@@ -2,45 +2,32 @@
 <html>
 <head>
     <title>SentraLink</title>
-
-    <!-- Cyber Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-
 <body>
 
 <div class="container">
+    <h1>🔐SentraLink</h1>
+    <p>Advanced Cyber URL Intelligence System</p>
 
-    <!-- CYBER HEADING -->
-    <h1 class="main-title">SentraLink</h1>
-    <p class="subtitle">Advanced Cyber URL Intelligence System</p>
-
-    <!-- 🔍 SEARCH -->
     <form method="POST">
-        <div class="search-box">
-            <input type="text" name="url" placeholder="Enter URL here..." required>
-            <button type="submit">🔍</button>
-        </div>
+        <input type="text" name="url" placeholder="Enter URL here..." required>
+        <button type="submit">Check</button>
     </form>
-
-    <!-- RESULT -->
+							
     {% if result %}
-    <div class="result">
-        <h2>Result: {{ result }}</h2>
-
-        {% if reasons %}
-        <h3>Reasons:</h3>
-        <ul>
-            {% for reason in reasons %}
-            <li>{{ reason }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-    </div>
+        <div class="result">
+            <h2>Result: {{ result }}</h2>
+            {% if reasons %}
+                <h3>Reasons:</h3>
+                <ul>
+                    {% for reason in reasons %}
+                        <li>{{ reason }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
     {% endif %}
-
 </div>
 
 </body>
