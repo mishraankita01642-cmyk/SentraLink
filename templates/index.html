@@ -7,37 +7,38 @@
 
 <body>
 
-    <!-- Logo -->
-    <img src="{{ url_for('static', filename='logo.png') }}" alt="SentraLink Logo" class="logo">
+<!-- 🔥 LOGO (Sticker Style) -->
+<img src="{{ url_for('static', filename='logo.png') }}" class="logo">
 
-    <!-- Main Container -->
-    <div class="container">
+<div class="container">
 
-        <!-- Form -->
-        <form method="POST">
-            <div class="search-box">
-                <input type="text" name="url" placeholder="Enter URL here..." required>
-            </div>
-        </form>
+    <p class="subtitle">Advanced Cyber URL Intelligence System</p>
 
-        <!-- Result Section -->
-        {% if result %}
-        <div class="result">
-            <h2>Result: {{ result }}</h2>
-
-            {% if reasons %}
-            <h3>Reasons:</h3>
-            <ul>
-                {% for reason in reasons %}
-                    <li>{{ reason }}</li>
-                {% endfor %}
-            </ul>
-            {% endif %}
-
+    <!-- 🔍 SEARCH BAR -->
+    <form method="POST">
+        <div class="search-box">
+            <input type="text" name="url" placeholder="Enter URL here..." required>
+            <button type="submit">🔍</button>
         </div>
-        {% endif %}
+    </form>
 
+    <!-- RESULT -->
+    {% if result %}
+    <div class="result">
+        <h2>Result: {{ result }}</h2>
+
+        {% if reasons %}
+        <h3>Reasons:</h3>
+        <ul>
+            {% for reason in reasons %}
+            <li>{{ reason }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
     </div>
+    {% endif %}
+
+</div>
 
 </body>
 </html>
