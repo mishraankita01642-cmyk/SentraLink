@@ -2,91 +2,56 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-
-    /* Full screen background (like before) */ 
     background: url("background.jpg") no-repeat center center fixed;
     background-size: cover;
+    color: white;
 }
 
-/* Container */
-.container {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 40px;
-    border-radius: 15px;
+h1 {
+    font-size: 3rem;
+    margin-top: 50px;
+    color: #00ffcc;
+    text-shadow: 0 0 15px #00ffcc;
+}
+
+input[type="text"] {
     width: 60%;
-    margin: 100px auto;
-    text-align: center;
-    box-shadow: 0 0 20px cyan;
-}
-
-/* CYBER TITLE */
-.main-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3.5rem;
-    color: #00ffcc;
-    letter-spacing: 2px;
-
-    text-shadow:
-        0 0 5px #00ffcc,
-        0 0 10px #00ffcc,
-        0 0 20px #00ffcc,
-        0 0 40px #00ffcc;
-
-    margin-bottom: 10px;
-    animation: flicker 2s infinite;
-}
-
-/* Flicker animation */
-@keyframes flicker {
-    0% { opacity: 1; }
-    45% { opacity: 0.85; }
-    50% { opacity: 0.4; }
-    55% { opacity: 0.9; }
-    100% { opacity: 1; }
-}
-
-/* Subtitle */
-.subtitle {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #00ffcc;
-}
-
-/* Search Box */
-.search-box {
-    position: relative;
-    width: 70%;
-    margin: auto;
-}
-
-/* Input */
-.search-box input {
-    width: 100%;
-    padding: 12px 45px 12px 15px;
+    padding: 12px;
     border-radius: 8px;
     border: none;
     outline: none;
     font-size: 16px;
 }
 
-/* Search Button */
-.search-box button {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    bottom: 5px;
+button {
+    padding: 12px 25px;
+    margin-top: 15px;
+    background: #00ffcc;
     border: none;
-    background: transparent;
-    font-size: 18px;
+    border-radius: 8px;
+    font-weight: bold;
     cursor: pointer;
-    color: #00ffcc;
+    transition: 0.3s;
 }
 
-/* Result */
+button:hover {
+    background: #00ccaa;
+    box-shadow: 0 0 15px #00ffcc;
+}
 .result {
     margin-top: 20px;
     padding: 15px;
     border-radius: 10px;
     background: rgba(0, 255, 204, 0.1);
     box-shadow: 0 0 20px #00ffcc;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    width: 60%;
+    margin: 80px auto;
+    text-align: center;
+    box-shadow: 0 0 20px cyan;
 }
