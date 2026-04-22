@@ -3,10 +3,9 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 
-    /* Full background (NO overlay, NO crop) */
-    background: url("background.jpg") no-repeat center center;
-    background-size: contain;
-    background-color: black;
+    /* Full screen background (like before) */
+    background: url("background.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* Container */
