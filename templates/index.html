@@ -4,31 +4,40 @@
     <title>SentraLink</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
-<div class="container">
-   <img src="{{ url_for('static', filename='logo.png') }}" alt="SentraLink Logo" class="logo">
-    <p>Advanced Cyber URL Intelligence System</p>
+    <!-- Logo -->
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="SentraLink Logo" class="logo">
 
-    <form method="POST">
-        <input type="text" name="url" placeholder="Enter URL here..." required>
-        <button type="submit">Check</button>
-    </form>
+    <!-- Main Container -->
+    <div class="container">
 
-    {% if result %}
+        <!-- Form -->
+        <form method="POST">
+            <div class="search-box">
+                <input type="text" name="url" placeholder="Enter URL here..." required>
+            </div>
+        </form>
+
+        <!-- Result Section -->
+        {% if result %}
         <div class="result">
             <h2>Result: {{ result }}</h2>
+
             {% if reasons %}
-                <h3>Reasons:</h3>
-                <ul>
-                    {% for reason in reasons %}
-                        <li>{{ reason }}</li>
-                    {% endfor %}
-                </ul>
+            <h3>Reasons:</h3>
+            <ul>
+                {% for reason in reasons %}
+                    <li>{{ reason }}</li>
+                {% endfor %}
+            </ul>
             {% endif %}
+
         </div>
-    {% endif %}
-</div>
+        {% endif %}
+
+    </div>
 
 </body>
 </html>
