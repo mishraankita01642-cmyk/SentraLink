@@ -91,11 +91,4 @@ button:hover {
     margin-right: auto;
 }
 
-.logo {
-    width: 250px;
-    margin-top: 40px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    filter: drop-shadow(0 0 15px cyan);
-}
+
