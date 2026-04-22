@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 
-    /* 🌌 Background */
+    /* Background */
     background: url("background.jpg") no-repeat center center fixed;
     background-size: cover;
 
@@ -21,7 +21,7 @@ body {
     box-shadow: 0 0 20px cyan;
 }
 
-/* 🔐 CYBER TITLE */
+/* CYBER TITLE */
 .main-title {
     font-family: 'Orbitron', sans-serif;
     font-size: 3.5rem;
